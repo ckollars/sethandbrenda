@@ -1,0 +1,80 @@
+//  Main
+//  -----------------------------
+.main {
+  position: relative;
+  max-width: 700px;
+}
+
+.container {
+  max-width: 520px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.lantern {
+  position: absolute;
+  background: url(../img/lantern.png) no-repeat;
+  background-size: cover;
+  width: 27px;
+  height: 129px;
+
+  &:first-child {
+    left: 12%;
+    top: -20px;
+    width: 18px;
+    height: 86px;
+  }
+  &:nth-child(2) {
+    left: 50%;
+    width: 22px;
+    height: 105px;
+  }
+  &:nth-child(3) {
+    left: 70%;
+  }
+}
+
+.lantern-large {
+  background: url(../img/lantern_&.png) no-repeat;
+  width: 56px;
+  height: 279px;
+  margin-right: 20px;
+}
+
+.branch {
+  position: absolute;
+  left: 0;
+  top: 300px;
+  background: url(../img/branch.png) no-repeat;
+  width: 458px;
+  height: 148px;
+}
+
+
+.header{
+  display: flex;
+  align-items: flex-end;
+}
+
+.h6 {
+  margin-bottom: 0;
+  font-family: $handwritten;
+  text-align: center;
+}
+
+.content {
+  margin-top: 200px;
+  padding-bottom: 160px;
+}
+
+.cols {
+  columns: 2;
+
+  @include mq(xs) {
+    columns: 1;
+  }
+  a {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
