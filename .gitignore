@@ -36,4 +36,4 @@ node_modules
 *.js.map
 
 # CMS uploaded assets
-public/*
+
