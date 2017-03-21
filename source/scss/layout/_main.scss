@@ -3,11 +3,12 @@
 .main {
   position: relative;
   max-width: 700px;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 520px;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -39,6 +40,12 @@
   width: 56px;
   height: 279px;
   margin-right: 20px;
+
+  @include mq(xs) {
+    width: 42px;
+    background-size: 100%;
+    background-position: 0 60px;
+  }
 }
 
 .branch {
@@ -48,6 +55,12 @@
   background: url(../img/branch.png) no-repeat;
   width: 458px;
   height: 148px;
+
+  @include mq(xs) {
+    width: 320px;
+    height: 110px;
+    background-size: cover;
+  }
 }
 
 
@@ -65,16 +78,25 @@
 .content {
   margin-top: 200px;
   padding-bottom: 160px;
+
+  @include mq(xs) {
+    margin-top: 160px;
+    padding-bottom: 40px;
+  }
 }
 
 .cols {
   columns: 2;
+  padding-right: 40px;
 
   @include mq(xs) {
     columns: 1;
+    text-align: center;
   }
+
   a {
     display: inline-block;
     margin-bottom: 10px;
+    // margin-right: 10px;
   }
 }

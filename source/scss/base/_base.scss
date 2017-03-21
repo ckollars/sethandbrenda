@@ -31,6 +31,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: #F1EAE2 url(../img/tree.png) no-repeat;
+
+  @include mq(xs) {
+    background-position: -60px 0;
+    background-size: 170%;
+  }
 }
 
 // 2. Media
