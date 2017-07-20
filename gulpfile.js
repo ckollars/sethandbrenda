@@ -139,7 +139,10 @@ gulp.task('browser-sync', function() {
     // Documentaion on browser sync is at: browsersync.io
     // It's really rad.
     browserSync.init(null, {
-        "proxy": "sethandbrenda.com",
+        server: {
+          'baseDir': 'public',
+        },
+        // "proxy": "sethandbrenda.dev",
         "ghostMode": {
           "clicks": false,
           "scroll": false,

@@ -6,67 +6,117 @@
   overflow-x: hidden;
 }
 
-.container {
-  max-width: 520px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-
-.lantern {
+.tree {
   position: absolute;
-  background: url(../img/lantern.png) no-repeat;
-  background-size: cover;
-  width: 27px;
-  height: 129px;
-
-  &:first-child {
-    left: 12%;
-    top: -20px;
-    width: 18px;
-    height: 86px;
-  }
-  &:nth-child(2) {
-    left: 50%;
-    width: 22px;
-    height: 105px;
-  }
-  &:nth-child(3) {
-    left: 70%;
-  }
-}
-
-.lantern-large {
-  background: url(../img/lantern_&.png) no-repeat;
-  width: 56px;
-  height: 279px;
-  margin-right: 20px;
+  top: 0;
+  left: 0;
+  width: 542px;
+  height: 1166px;
+  background: url(../img/tree.svg) no-repeat;
 
   @include mq(xs) {
-    width: 42px;
-    background-size: 100%;
-    background-position: 0 60px;
+    left: -100px;
   }
 }
 
 .branch {
   position: absolute;
-  left: 0;
-  top: 300px;
-  background: url(../img/branch.png) no-repeat;
-  width: 458px;
-  height: 148px;
+  left: 118px;
+  top: 105px;
+  background: url(../img/branch.svg) no-repeat;
+  width: 324px;
+  height: 115px;
 
   @include mq(xs) {
-    width: 320px;
-    height: 110px;
-    background-size: cover;
+    left: 13px;
+    top: 120px;
   }
 }
 
+.container {
+  max-width: 510px;
+  padding: 0 10px;
+  margin: 0 0 0 120px;
+
+  @include mq(xs) {
+    margin-left: 0;
+  }
+}
+
+.lantern {
+  position: absolute;
+  background: url(../img/lantern.svg) no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+  width: 27px;
+  height: 160px;
+
+  &:first-child {
+    left: 9%;
+    top: 0;
+    width: 14px;
+    height: 114px;
+
+    @include mq(xs) {
+      display: none;
+    }
+  }
+  &:nth-child(2) {
+    left: 28%;
+    width: 13px;
+    height: 50px;
+    top: 0;
+  }
+  &:nth-child(3) {
+    left: 40%;
+    width: 16px;
+    height: 120px;
+    top: -20px;
+
+    @include mq(xs) {
+      left: 50%;
+    }
+  }
+  &:nth-child(4) {
+    left: 64%;
+
+    @include mq(xs) {
+      left: 86%;
+    }
+  }
+  &:nth-child(5) {
+    left: 50%;
+    width: 20px;
+    height: 130px;
+    top: -40px;
+
+    @include mq(xs) {
+      left: 70%;
+    }
+  }
+}
+
+.lantern-large {
+  background: url(../img/large_lantern.svg) no-repeat;
+  background-position: left bottom;
+  width: 48px;
+  height: 544px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+
+  @include mq(xs) {
+    width: 42px;
+    background-size: 100%;
+    // background-position: 0 260px;
+    margin-bottom: 0;
+  }
+}
 
 .header{
   display: flex;
   align-items: flex-end;
+  margin-top: -210px;
+  padding-bottom: 15px;
 }
 
 .h6 {
@@ -76,12 +126,67 @@
 }
 
 .content {
-  margin-top: 200px;
-  padding-bottom: 160px;
+  p {
+    font-size: 34px;
+    line-height: 1;
 
-  @include mq(xs) {
-    margin-top: 160px;
-    padding-bottom: 40px;
+    @include mq(s) {
+      font-size: 24px;
+    }
+  }
+
+  &.small p {
+    font-size: 18px;
+
+    @include mq(s) {
+      font-size: 16px;
+    }
+  }
+
+  &.small {
+    margin: 36px 0 0 0;
+    @include mq(s) {
+      margin-top: 18px;
+    }
+  }
+
+  p.cta {
+    margin: 18px 0;
+    text-align: center;
+  }
+
+  p.large {
+    font-size: 6.8rem;
+    color: $darkblue;
+    margin: 48px 0 0 0;
+
+    @include mq(s) {
+      font-size: 48px;
+      margin-top: 24px;
+    }
+  }
+
+  &.hotels {
+    margin-top: 48px;
+
+    @include mq(s) {
+      padding: 0 16px;
+    }
+    p {
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+  }
+}
+
+.squiggle {
+  background: url(../img/squiggle.svg) no-repeat;
+  width: 90px;
+  height: 22px;
+  margin: 0 auto 36px auto;
+
+  @include mq(s) {
+    margin-bottom: 24px;
   }
 }
 

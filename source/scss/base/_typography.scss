@@ -30,11 +30,13 @@
 
 h1 {
   font-weight: normal;
-  font-family: $handwritten;
+  font-family: $handwritten2;
   margin: 0;
-  font-size: 4.2rem;
+  font-size: 5.4rem;
+  line-height: 1;
+  color: $darkblue;
 
-  @include mq(s) {
+  @include mq(xs) {
     font-size: 3.4rem;
   }
 
@@ -75,6 +77,14 @@ h5 {
   }
 }
 
+.clicker {
+  font-family: $handwritten2;
+  font-size: 2.8rem;
+}
+.center {
+  text-align: center;
+}
+
 
 // 3. Paragraphs, links and list
 // ---------
@@ -84,7 +94,7 @@ p, ul, ol, pre, table, blockquote {
 }
 
 p {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 0 0;
 }
 
 a {
@@ -94,7 +104,7 @@ a {
 }
 
 a {
-  color: $black;
+  color: $darkblue;
   border-bottom: 1px solid currentColor;
   transition: border $fast ease-out;
 

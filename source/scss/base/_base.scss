@@ -25,16 +25,16 @@ body {
   @include serif();
   @include font-size(m);
   margin: 0;
-  color: $black;
+  color: $darkblue;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: #F1EAE2 url(../img/tree.png) no-repeat;
+  background-color: rgba(#F3E6C9, 0.7);
 
   @include mq(xs) {
-    background-position: -60px 0;
-    background-size: 170%;
+    // background-position: -60px 0;
+    // background-size: 170%;
   }
 }
 
